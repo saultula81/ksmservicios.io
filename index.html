@@ -1,164 +1,315 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KSM Servicios | Prompt Engineering y Asesoría en IA</title>
-  
-  <link rel="icon" href="favicon.ico" type="image/x-icon"> 
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="KSM Servicios Inteligentes - Transformamos ideas en soluciones tecnológicas innovadoras">
+    <meta name="keywords" content="desarrollo web, aplicaciones móviles, consultoría IT, KSM Servicios">
+    <meta name="author" content="KSM Servicios">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ksmservicios.io/">
+    <meta property="og:title" content="KSM Servicios Inteligentes">
+    <meta property="og:description" content="Servicios Inteligentes para el Futuro Digital">
+    <meta property="og:image" content="assets/images/kosmos.png">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://ksmservicios.io/">
+    <meta property="twitter:title" content="KSM Servicios Inteligentes">
+    <meta property="twitter:description" content="Servicios Inteligentes para el Futuro Digital">
+    <meta property="twitter:image" content="assets/images/kosmos.png">
+    
+    <title>KSM Servicios Inteligentes | Soluciones Tecnológicas</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
+    <!-- Header -->
+    <header class="ksm-header">
+        <div class="container">
+            <div class="logo">
+                <img src="assets/images/ksm.png" alt="KSM Servicios" class="logo-img">
+                <span class="logo-text">KSM</span>
+            </div>
+            <nav class="nav-menu" id="navMenu">
+                <a href="#inicio" class="nav-link active">Inicio</a>
+                <a href="#servicios" class="nav-link">Servicios</a>
+                <a href="#portfolio" class="nav-link">Portfolio</a>
+                <a href="#nosotros" class="nav-link">Nosotros</a>
+                <a href="#contacto" class="nav-link">Contacto</a>
+            </nav>
+            <button class="cta-button">Cotizar Proyecto</button>
+            <button class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
 
-  <header id="main-header">
-    <div class="logo">KSM</div>
-    <nav aria-label="Navegación principal del sitio">
-      <ul class="nav-links">
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#productos">Productos</a></li>
-        <li><a href="#servicios">Servicios</a></li>
-        <li><a href="#contacto" class="btn-contacto" id="abrir-modal-header">Contacto</a></li> 
-      </ul>
-    </nav>
-  </header>
-
-  <main>
-    <section id="inicio" class="hero" role="region" aria-label="Introducción a KSM Servicios">
-        <hgroup>
-            <h1>Monetiza tu conocimiento. Escala tu impacto.</h1>
-            <p class="slogan">KSM Servicios de Prompt Engineering y Asesoría en IA.</p>
-        </hgroup>
-        <p class="descripcion">
-          KsmServicios ofrece asesoría especializada y servicios personalizados de **Prompt Engineering** para transformar tu conocimiento en productos digitales rentables. 
-          En lugar de vender horas, te ayudamos a crear activos digitales (cursos, plantillas, ebooks, herramientas, membresías) que potencian tu talento y generan ingresos recurrentes.
-        </p>
-        <div class="cta-group">
-          <a href="#productos" class="cta-primary">Ver Productos</a>
-          <a href="#contacto" class="cta-secondary" id="abrir-modal">Haz tu consulta</a> 
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <video autoplay muted loop playsinline class="hero-video">
+            <source src="assets/videos/kosmosini.mp4" type="video/mp4">
+        </video>
+        <div id="particles-js"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <img src="assets/images/kosmos.png" class="hero-logo fade-in" alt="KSM Kosmos">
+            <h1 class="hero-title typing-effect">Servicios Inteligentes para el Futuro Digital</h1>
+            <p class="hero-subtitle fade-in-up">Transformamos ideas en soluciones tecnológicas innovadoras</p>
+            <div class="hero-buttons fade-in-up">
+                <button class="btn-primary" onclick="scrollToSection('servicios')">
+                    Ver Servicios
+                </button>
+                <button class="btn-secondary" onclick="scrollToSection('contacto')">
+                    Contactar
+                </button>
+            </div>
+            <div class="hero-stats fade-in-up">
+                <div class="stat">
+                    <span class="stat-number">50+</span>
+                    <span class="stat-label">Proyectos</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">Satisfacción</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">24/7</span>
+                    <span class="stat-label">Soporte</span>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll</span>
+            <div class="scroll-arrow"></div>
         </div>
     </section>
 
-    <hr>
+    <!-- Services Section -->
+    <section class="services" id="servicios">
+        <div class="container">
+            <h2 class="section-title">Nuestros Servicios</h2>
+            <p class="section-subtitle">Soluciones tecnológicas a medida para tu negocio</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">💻</div>
+                    <h3>Desarrollo Web</h3>
+                    <p>Sitios web modernos, responsivos y optimizados para SEO</p>
+                    <ul class="service-features">
+                        <li>Diseño responsive</li>
+                        <li>Performance optimizado</li>
+                        <li>SEO friendly</li>
+                    </ul>
+                    <button class="service-btn">Más información</button>
+                </div>
 
-    <section id="productos" class="productos" role="region" aria-label="Productos Digitales de KSM Servicios">
-      <h2>Productos Digitales que Generan Ingresos Pasivos</h2>
-      <div class="productos-grid">
-        <article class="producto">
-          <h3><i class="fas fa-graduation-cap icon-product"></i> Ayuda en Línea</h3>
-          <p>Respondemos Tus Consultas, de Manera Clara.</p>
-        </article>
-        <article class="producto">
-          <h3><i class="fas fa-file-alt icon-product"></i> Plantillas de Prompts</h3>
-          <p>Soluciones instantáneas listas para usar y adaptar. Máxima eficiencia en tareas de IA cotidianas.</p>
-        </article>
-        <article class="producto">
-          <h3><i class="fas fa-book icon-product"></i> Ebooks y Guías</h3>
-          <p>Guías profundas sobre estrategias avanzadas de IA aplicada y monetización de conocimiento.</p>
-        </article>
-        <article class="producto">
-          <h3><i class="fas fa-robot icon-product"></i> Herramientas Automatizadas</h3>
-          <p>Generadores inteligentes y scripts para aumentar tu productividad y reducir la carga de trabajo manual.</p>
-        </article>
+                <div class="service-card">
+                    <div class="service-icon">📱</div>
+                    <h3>Aplicaciones Móviles</h3>
+                    <p>Apps nativas y multiplataforma para iOS y Android</p>
+                    <ul class="service-features">
+                        <li>React Native</li>
+                        <li>Flutter</li>
+                        <li>Nativo iOS/Android</li>
+                    </ul>
+                    <button class="service-btn">Más información</button>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🔧</div>
+                    <h3>Consultoría IT</h3>
+                    <p>Asesoramiento tecnológico para optimizar tu infraestructura</p>
+                    <ul class="service-features">
+                        <li>Auditoría técnica</li>
+                        <li>Optimización</li>
+                        <li>Estrategia digital</li>
+                    </ul>
+                    <button class="service-btn">Más información</button>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">☁️</div>
+                    <h3>Cloud Services</h3>
+                    <p>Migración y gestión de servicios en la nube</p>
+                    <ul class="service-features">
+                        <li>AWS / Azure / GCP</li>
+                        <li>Migración cloud</li>
+                        <li>DevOps</li>
+                    </ul>
+                    <button class="service-btn">Más información</button>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🛡️</div>
+                    <h3>Ciberseguridad</h3>
+                    <p>Protección integral de tus sistemas y datos</p>
+                    <ul class="service-features">
+                        <li>Auditoría de seguridad</li>
+                        <li>Pentesting</li>
+                        <li>Monitoreo 24/7</li>
+                    </ul>
+                    <button class="service-btn">Más información</button>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🎯</div>
+                    <h3>Soporte Técnico</h3>
+                    <p>Asistencia técnica continua para tu tranquilidad</p>
+                    <ul class="service-features">
+                        <li>Soporte 24/7</li>
+                        <li>Mantenimiento</li>
+                        <li>Actualizaciones</li>
+                    </ul>
+                    <button class="service-btn">Más información</button>
+                </div>
             </div>
+        </div>
     </section>
 
-    <hr>
-
-    <section id="servicios" class="servicios" role="region" aria-label="Servicios de Asesoría Personalizada">
-      <div class="servicios-content">
-        <h2>Consultoría y Estrategia AI Personalizada</h2>
-        <p>Ofrecemos consultoría especializada en ingeniería de prompts y estrategias de monetización digital. Este servicio premium está diseñado para **maximizar el valor de tu conocimiento** y llevar tus ideas a una escala profesional.</p>
-        <a href="#contacto" class="cta-primary" id="abrir-modal2">Solicitar Asesoría Premium</a>
-      </div>
+    <!-- Technologies Section -->
+    <section class="technologies">
+        <div class="container">
+            <h2 class="section-title">Tecnologías que Dominamos</h2>
+            <div class="tech-grid">
+                <div class="tech-item">
+                    <span class="tech-name">React</span>
+                </div>
+                <div class="tech-item">
+                    <span class="tech-name">Node.js</span>
+                </div>
+                <div class="tech-item">
+                    <span class="tech-name">Python</span>
+                </div>
+                <div class="tech-item">
+                    <span class="tech-name">AWS</span>
+                </div>
+                <div class="tech-item">
+                    <span class="tech-name">Docker</span>
+                </div>
+                <div class="tech-item">
+                    <span class="tech-name">PostgreSQL</span>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <div id="modal-form" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-      <div class="modal-content">
-        <span class="cerrar" aria-label="Cerrar formulario">&times;</span>
-        <h3 id="modal-title" class="modal-title">Contáctanos para Asesoría</h3>
-        <p class="modal-subtitle">¡Estamos listos para potenciar tu conocimiento!</p>
-        
-        <form class="contact-form" action="https://formspree.io/f/manpapqp" method="POST">
-            <div class="form-group">
-                <label for="name">Nombre Completo</label>
-                <input type="text" id="name" name="name" required placeholder="Tu nombre y apellido">
+    <!-- Contact Section -->
+    <section class="contact" id="contacto">
+        <div class="container">
+            <h2 class="section-title">Contáctanos</h2>
+            <p class="section-subtitle">Estamos listos para hacer realidad tu proyecto</p>
+            
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Información de Contacto</h3>
+                    <div class="contact-item">
+                        <span class="contact-icon">📧</span>
+                        <div>
+                            <strong>Email</strong>
+                            <p>contacto@ksmservicios.io</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">📱</span>
+                        <div>
+                            <strong>Teléfono</strong>
+                            <p>+54 9 11 XXXX-XXXX</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">📍</span>
+                        <div>
+                            <strong>Ubicación</strong>
+                            <p>Buenos Aires, Argentina</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link">LinkedIn</a>
+                        <a href="#" class="social-link">GitHub</a>
+                        <a href="#" class="social-link">Twitter</a>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" required>
+                        <label for="name">Nombre</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" required>
+                        <label for="email">Email</label>
+                    </div>
+                    <div class="form-group">
+                        <select id="service" required>
+                            <option value="">Selecciona un servicio</option>
+                            <option value="web">Desarrollo Web</option>
+                            <option value="mobile">App Móvil</option>
+                            <option value="consulting">Consultoría</option>
+                            <option value="cloud">Cloud Services</option>
+                            <option value="security">Ciberseguridad</option>
+                            <option value="support">Soporte Técnico</option>
+                        </select>
+                        <label for="service">Servicio</label>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" rows="5" required></textarea>
+                        <label for="message">Mensaje</label>
+                    </div>
+                    <button type="submit" class="btn-primary">Enviar Mensaje</button>
+                </form>
             </div>
-            <div class="form-group">
-                <label for="email">Correo Electrónico</label>
-                <input type="email" id="email" name="email" required placeholder="tu.correo@ejemplo.com">
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="assets/images/kosmos.png" alt="KSM" class="footer-logo">
+                    <p>Servicios Inteligentes para el Futuro Digital</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Servicios</h4>
+                    <ul>
+                        <li><a href="#servicios">Desarrollo Web</a></li>
+                        <li><a href="#servicios">Apps Móviles</a></li>
+                        <li><a href="#servicios">Consultoría IT</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Empresa</h4>
+                    <ul>
+                        <li><a href="#nosotros">Sobre Nosotros</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="form-group">
-                <label for="phone">Teléfono (Opcional)</label>
-                <input type="tel" id="phone" name="phone" placeholder="+XX XXX XXX XXX">
+            <div class="footer-bottom">
+                <p>&copy; 2025 KSM Servicios. Todos los derechos reservados.</p>
             </div>
-            <div class="form-group">
-                <label for="service">Servicio de Interés</label>
-                <select id="service" name="service">
-                    <option value="">Selecciona un servicio</option>
-                    <option value="prompt_engineering">Prompt Engineering</option>
-                    <option value="asesoria_ia">Asesoría en Estrategias IA</option>
-                    <option value="cursos_digitales">Creación de Cursos Digitales</option>
-                    <option value="otro">Otro</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="message">Mensaje</label>
-                <textarea id="message" name="message" rows="5" required placeholder="Describe brevemente tus necesidades o preguntas..."></textarea>
-            </div>
-            <button type="submit" class="cta-primary form-submit-btn">Enviar Mensaje</button>
-        </form>
-      </div>
-    </div>
-  </main>
+        </div>
+    </footer>
 
-  <hr>
-
-  <footer id="main-footer">
-    <div class="footer-info">
-      <p>📍 Rosario del Tala, Entre Ríos, Argentina | ✉️ <a href="mailto:saultula.st@gmail.com">saultula.st@gmail.com</a></p>
-      <p>© <time datetime="2025">2025</time> KSM Servicios — Todos los derechos reservados.</p>
-    </div>
-    <nav class="footer-social" aria-label="Redes Sociales">
-      <p>Síguenos en:</p>
-      <ul class="social-links">
-        <li><a href="https://www.instagram.com/ksm_servicios" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i> Instagram</a></li>
-        <li><a href="https://www.facebook.com/fernandomef" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i> Facebook</a></li>
-      </ul>
-    </nav>
-  </footer>
-
-  <script>
-    const modal = document.getElementById("modal-form");
-    // Se incluye el nuevo botón del header en la lista de botones que abren el modal
-    const btns = [
-        document.getElementById("abrir-modal"), 
-        document.getElementById("abrir-modal2"), 
-        document.getElementById("abrir-modal-header")
-    ];
-    const span = document.getElementsByClassName("cerrar")[0];
-
-    btns.forEach(btn => {
-      if (btn) { // Asegurarse de que el elemento existe antes de añadir el evento
-        btn.onclick = function(e) {
-          e.preventDefault(); // Previene el salto de página si es un <a>
-          modal.style.display = "block";
-        }
-      }
-    });
-
-    span.onclick = function() {
-      modal.style.display = "none";
-    }
-
-    window.onclick = function(event) {
-      if (event.target == modal) {
-        modal.style.display = "none";
-      }
-    }
-  </script>
-
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="js/particles-config.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
